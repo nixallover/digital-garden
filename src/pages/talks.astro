@@ -1,0 +1,105 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { format } from "date-fns";
+
+const appearances = [
+  {
+    date: new Date("2024-10-07"),
+    type: "talk",
+    title: "Unleash the Nanobots: A New Model for CI Execution",
+    host: "Monorepo World",
+    url: "https://www.youtube.com/live/Z5tg6_eIphc?si=r7-AlDBrMLoATvbq&t=23653",
+    // cohost: Rares
+  },
+  {
+    date: new Date("2021-05-13"),
+    type: "podcast",
+    title: "How to Design CSS for Design and Performance",
+    host: "Web Rush",
+    url: "https://luminary.link/TRobe3gXgQb",
+  },
+  {
+    date: new Date("2021-04-01"),
+    type: "talk",
+    title: "Best Friends Forever: Reactive Code + Animations",
+    host: "Ng Conf",
+    url: "https://www.youtube.com/watch?v=d7JX2e4AZ-8",
+  },
+  {
+    date: new Date("2020-12-01"),
+    type: "podcast",
+    title: "Styling Applications in Angular",
+    host: "The Angular Plus Show",
+    url: "https://www.iheart.com/podcast/966-the-angular-show-59795034/episode/s1-e41-styling-applications-in-74627348/",
+  },
+  {
+    date: new Date("2020-08-01"),
+    type: "podcast",
+    title: "ZLS 018",
+    host: "Ng Conf",
+    url: "https://youtu.be/XVB8rmdmeTg?si=dhG3-yDJzhPtc-en",
+  },
+  {
+    date: new Date("2019-09-05"),
+    type: "podcast",
+    title: "Styling Modern Applications",
+    host: "Web Rush",
+    url: "https://luminary.link/2wpiRLel5jb",
+  },
+  {
+    date: new Date("2019-05-03"),
+    type: "talk",
+    title: "Wrapping It Up With Decorators",
+    host: "Ng Conf",
+    url: "https://youtu.be/Guvd5BYocYg?si=VP48XtdxlQiN4y9O",
+  },
+  {
+    date: new Date("2019-03-19"),
+    type: "podcast",
+    title: "Decorators",
+    host: "Web Rush",
+    url: "https://luminary.link/W78zwmBsqnb",
+  },
+  {
+    date: new Date("2019-01-10"),
+    type: "talk",
+    title: "Wrapping It Up With Decorators",
+    host: "ngAtlanta",
+    url: "https://www.youtube.com/watch?v=nVoDxho-Ahk",
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main class="flex flex-col items-center space-y-8">
+      <div class="">
+        <h1 class="mb-8">Talks & podcasts</h1>
+        {
+          appearances.map((appearance) => (
+            <div class="mb-8">
+              <div class="text-sm">
+                <span class="bg-slate-800 text-white rounded pl-2 px-1 mr-2">
+                  {appearance.type}
+                </span>
+                {appearance.host} &middot; {format(appearance.date, "MMMM y")}
+              </div>
+              <a href={appearance.url} target="_blank" class="hover:underline">
+                <h2 class="text-xl">{appearance.title}</h2>
+              </a>
+            </div>
+          ))
+        }
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
