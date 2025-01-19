@@ -23,7 +23,7 @@ jobs:
           cache: "npm"
 
       - run: npx nx-cloud start-ci-run --distribute-on="3 linux-medium-js" --stop-agents-after="e2e-ci"
-      - run: npm ci
+      - run: yarn install --frozen-lockfile
 
       - uses: nrwl/nx-set-shas@v4
 
