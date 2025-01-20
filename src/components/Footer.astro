@@ -2,10 +2,16 @@
 const today = new Date();
 ---
 
-<footer>
-  &copy; {today.getFullYear()} Nicole Oliver. All rights reserved.
-  <div class="social-links">
-    <a href="https://github.com/nixallover" target="_blank">
+<footer class="flex flex-col items-center gap-4 px-8 pt-10 pb-24">
+  <span class="text-slate-800"
+    >&copy; {today.getFullYear()} Nicole Oliver. All rights reserved.</span
+  >
+  <div class="flex justify-center gap-3">
+    <a
+      class="text-slate-800 hover:text-emerald-500 transition-colors"
+      href="https://github.com/nixallover"
+      target="_blank"
+    >
       <span class="sr-only">Find me on Github</span>
       <svg
         viewBox="0 0 16 16"
@@ -19,7 +25,11 @@ const today = new Date();
         ></path></svg
       >
     </a>
-    <a href="https://www.linkedin.com/in/nicolesoliver/" target="_blank">
+    <a
+      class="text-slate-800 hover:text-emerald-500 transition-colors"
+      href="https://www.linkedin.com/in/nicolesoliver/"
+      target="_blank"
+    >
       <span class="sr-only">Find me on LinkedIn</span>
       <svg
         viewBox="0 0 50 50"
@@ -35,6 +45,7 @@ const today = new Date();
       </svg>
     </a>
     <a
+      class="text-slate-800 hover:text-emerald-500 transition-colors"
       href="https://bsky.app/profile/nicolesoliver.bsky.social"
       target="_blank"
     >
@@ -52,7 +63,11 @@ const today = new Date();
         ></path>
       </svg>
     </a>
-    <a href="https://twitter.com/nixcodes" target="_blank">
+    <a
+      class="text-slate-800 hover:text-emerald-500 transition-colors"
+      href="https://twitter.com/nixcodes"
+      target="_blank"
+    >
       <span class="sr-only">Follow me on Twitter</span>
       <svg
         viewBox="0 0 16 16"
@@ -68,24 +83,3 @@ const today = new Date();
     </a>
   </div>
 </footer>
-<style>
-  footer {
-    padding: 2em 1em 6em 1em;
-    background: linear-gradient(var(--gray-gradient)) no-repeat;
-    color: rgb(var(--gray));
-    text-align: center;
-  }
-  .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    margin-top: 1em;
-  }
-  .social-links a {
-    text-decoration: none;
-    color: rgb(var(--gray));
-  }
-  .social-links a:hover {
-    color: rgb(var(--gray-dark));
-  }
-</style>

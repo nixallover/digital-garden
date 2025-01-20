@@ -3,16 +3,22 @@ import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
 ---
 
-<header>
+<header class="px-8 bg-stone-50 shadow-lg relative">
   <nav>
-    <h2><a href="/">{SITE_TITLE}</a></h2>
+    <h2 class="font-serif italic text-2xl">
+      <a href="/">{SITE_TITLE}</a>
+    </h2>
     <div class="internal-links">
       <HeaderLink href="/">Home</HeaderLink>
       <HeaderLink href="/work">Work</HeaderLink>
       <HeaderLink href="/talks">Talks</HeaderLink>
     </div>
-    <div class="social-links">
-      <a href="https://github.com/nixallover" target="_blank">
+    <div class="flex justify-center gap-3">
+      <a
+        class="text-slate-800 hover:text-emerald-500 transition-colors"
+        href="https://github.com/nixallover"
+        target="_blank"
+      >
         <span class="sr-only">Find me on Github</span>
         <svg
           viewBox="0 0 16 16"
@@ -26,7 +32,11 @@ import { SITE_TITLE } from "../consts";
           ></path></svg
         >
       </a>
-      <a href="https://www.linkedin.com/in/nicolesoliver/" target="_blank">
+      <a
+        class="text-slate-800 hover:text-emerald-500 transition-colors"
+        href="https://www.linkedin.com/in/nicolesoliver/"
+        target="_blank"
+      >
         <span class="sr-only">Find me on LinkedIn</span>
         <svg
           viewBox="0 0 50 50"
@@ -42,6 +52,7 @@ import { SITE_TITLE } from "../consts";
         </svg>
       </a>
       <a
+        class="text-slate-800 hover:text-emerald-500 transition-colors"
         href="https://bsky.app/profile/nicolesoliver.bsky.social"
         target="_blank"
       >
@@ -59,7 +70,11 @@ import { SITE_TITLE } from "../consts";
           ></path>
         </svg>
       </a>
-      <a href="https://twitter.com/nixcodes" target="_blank">
+      <a
+        class="text-slate-800 hover:text-emerald-500 transition-colors"
+        href="https://twitter.com/nixcodes"
+        target="_blank"
+      >
         <span class="sr-only">Follow me on Twitter</span>
         <svg
           viewBox="0 0 16 16"
@@ -77,16 +92,16 @@ import { SITE_TITLE } from "../consts";
   </nav>
 </header>
 <style>
-  header {
+  /* header {
     margin: 0;
     padding: 0 1em;
     background: white;
     box-shadow: 0 2px 8px rgba(var(--black), 5%);
-  }
-  h2 {
+  } */
+  /* h2 {
     margin: 0;
     font-size: 1em;
-  }
+  } */
 
   h2 a,
   h2 a.active {
@@ -97,19 +112,15 @@ import { SITE_TITLE } from "../consts";
     align-items: center;
     justify-content: space-between;
   }
-  nav a {
+  .internal-links a {
     padding: 1em 0.5em;
     color: var(--black);
     border-bottom: 4px solid transparent;
     text-decoration: none;
   }
-  nav a.active {
+  .internal-links a.active {
     text-decoration: none;
     border-bottom-color: var(--accent);
-  }
-  .social-links,
-  .social-links a {
-    display: flex;
   }
   @media (max-width: 720px) {
     .social-links {
