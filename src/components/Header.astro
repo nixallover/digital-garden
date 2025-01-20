@@ -4,16 +4,18 @@ import { SITE_TITLE } from "../consts";
 ---
 
 <header class="px-8 bg-stone-50 shadow-lg relative">
-  <nav>
-    <h2 class="font-serif italic text-2xl">
+  <nav class="flex items-center justify-between">
+    <h2 class="text-emerald-900 font-serif italic text-2xl">
       <a href="/">{SITE_TITLE}</a>
     </h2>
-    <div class="internal-links">
+
+    <div class="flex">
       <HeaderLink href="/">Home</HeaderLink>
-      <HeaderLink href="/work">Work</HeaderLink>
+      <!-- <HeaderLink href="/work">Work</HeaderLink> -->
       <HeaderLink href="/talks">Talks</HeaderLink>
     </div>
-    <div class="flex justify-center gap-3">
+
+    <div class="hidden sm:flex justify-center gap-3">
       <a
         class="text-slate-800 hover:text-emerald-500 transition-colors"
         href="https://github.com/nixallover"
@@ -91,40 +93,3 @@ import { SITE_TITLE } from "../consts";
     </div>
   </nav>
 </header>
-<style>
-  /* header {
-    margin: 0;
-    padding: 0 1em;
-    background: white;
-    box-shadow: 0 2px 8px rgba(var(--black), 5%);
-  } */
-  /* h2 {
-    margin: 0;
-    font-size: 1em;
-  } */
-
-  h2 a,
-  h2 a.active {
-    text-decoration: none;
-  }
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .internal-links a {
-    padding: 1em 0.5em;
-    color: var(--black);
-    border-bottom: 4px solid transparent;
-    text-decoration: none;
-  }
-  .internal-links a.active {
-    text-decoration: none;
-    border-bottom-color: var(--accent);
-  }
-  @media (max-width: 720px) {
-    .social-links {
-      display: none;
-    }
-  }
-</style>
