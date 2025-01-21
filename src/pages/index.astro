@@ -10,7 +10,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="bg-stone-100 text-stone-800 font-sans font-light">
+  <body class="bg-stone-100 text-stone-800 font-sans font-light text-base">
     <Header />
     <main class="bg-stone-50 flex justify-center w-full px-12 py-20">
       <section class="sm:flex items-center sm:space-x-12 max-w-6xl md:w-full">
@@ -24,34 +24,36 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
           <h1 class="text-5xl md:text-7xl mb-4 font-serif font-bold">
             Heya, I'm Nicole <span class="noto-emoji">👋</span>
           </h1>
-          <h2 class="text-2xl md:text-4xl italic mb-4 font-serif">
+          <h2 class="text-2xl md:text-3xl italic mb-4 font-serif">
             I’m a product manager, software engineer and illustrator based in
             California. <span class="noto-emoji">🐢</span>
           </h2>
-          <p class="text-lg mb-4">
-            At university, I trained in drawing and painting, and aspired to
-            become a professional illustrator. I still draw as a hobby and
-            <strong>illustrate technical topics</strong>, which I find is a fun
-            and effective way to democratize complex topics.
-          </p>
-          <p class="text-lg mb-4">
-            I’ve always had an affinity for computers and the web. For most of
-            the last decade I’ve focused on creating intuitive experiences for
-            the web as a software engineer. I’ve worked on small scrappy teams
-            where every developer wore many hats, and consulted with large
-            organizations like Nintendo and T-Mobile, where teams are quite
-            specialized.
-          </p>
-          <p class="text-lg mb-4">
-            In the last year, I’ve changed my focus to product. At Nx we’re
-            building <a
-              href="https://nx.dev/nx-cloud"
-              target="_blank"
-              class="underline underline-offset-2">Nx Cloud</a
-            >, a powerful platform for achieving fast, reliable CI. It’s the
-            most exciting thing I’ve worked on in my career, and I'm looking
-            forward to sharing some of my learnings here.
-          </p>
+          <div class="prose prose-lg">
+            <p>
+              At university, I trained in drawing and painting, and aspired to
+              become a professional illustrator. I still draw as a hobby and
+              <strong>illustrate technical topics</strong>, which I find is a
+              fun and effective way to democratize complex topics.
+            </p>
+            <p>
+              I’ve always had an affinity for computers and the web. For most of
+              the last decade I’ve focused on creating intuitive experiences for
+              the web as a software engineer. I’ve worked on small scrappy teams
+              where every developer wore many hats, and consulted with large
+              organizations like Nintendo and T-Mobile, where teams are quite
+              specialized.
+            </p>
+            <p>
+              In the last year, I’ve changed my focus to product. At Nx we’re
+              building <a
+                href="https://nx.dev/nx-cloud"
+                target="_blank"
+                class="underline underline-offset-2">Nx Cloud</a
+              >, a powerful platform for achieving fast, reliable CI. It’s the
+              most exciting thing I’ve worked on in my career, and I'm looking
+              forward to sharing some of my learnings here.
+            </p>
+          </div>
         </div>
       </section>
     </main>
