@@ -22,6 +22,7 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
     "nx": "20.3.0"
   },
   "nx": {}

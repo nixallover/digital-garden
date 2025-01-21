@@ -13,7 +13,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} />
-    <!-- <style>
+    <style>
       main {
         width: calc(100% - 2em);
         max-width: 100%;
@@ -35,26 +35,10 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
         padding: 1em;
         color: rgb(var(--gray-dark));
       }
-      .title {
-        margin-bottom: 1em;
-        padding: 1em 0;
-        text-align: center;
-        line-height: 1;
-      }
-      .title h1 {
-        margin: 0 0 0.5em 0;
-      }
-      .date {
-        margin-bottom: 0.5em;
-        color: rgb(var(--gray));
-      }
-      .last-updated-on {
-        font-style: italic;
-      }
-    </style> -->
+    </style>
   </head>
 
-  <body class="bg-stone-100">
+  <body class="bg-stone-100 text-stone-800 font-sans font-light">
     <Header />
     <main class="bg-stone-50 flex justify-center w-full px-12 py-20">
       <article class="sm:flex sm:flex-col items-center sm:space-x-12 max-w-6xl">
@@ -72,18 +56,23 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
           }
         </div>
         <div class="prose">
-          <div class="title">
-            <div class="date">
-              <FormattedDate date={pubDate} />
+          <div class="my-8 text-center">
+            <div class="mb-4 inline-flex gap-2 italic">
+              First published on <FormattedDate date={pubDate} />
               {
                 updatedDate && (
-                  <div class="last-updated-on">
-                    Last updated on <FormattedDate date={updatedDate} />
-                  </div>
+                  <>
+                    <span>&middot;</span>
+                    <span>
+                      Last updated on <FormattedDate date={updatedDate} />
+                    </span>
+                  </>
                 )
               }
             </div>
-            <h1>{title}</h1>
+            <h1 class="font-serif text-5xl font-semibold text-stone-900">
+              {title}
+            </h1>
             <hr />
           </div>
           <slot />

@@ -5,8 +5,9 @@ export default {
     fontFamily: {
       sans: ["Lexend", "sans-serif"],
       serif: ["Spectral", "serif"],
+      display: ["Spectral", "serif"],
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
