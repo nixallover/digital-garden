@@ -18,6 +18,8 @@ export default {
       "5xl": "2.75rem",
       "6xl": "3rem",
       "7xl": "3.25rem",
+      "8xl": "3.5rem",
+      "9xl": "3.75rem",
     },
     extend: {},
   },
