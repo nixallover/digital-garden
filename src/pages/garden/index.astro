@@ -6,7 +6,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
 
-const posts = (await getCollection("work")).sort(
+const posts = (await getCollection("garden")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
@@ -30,7 +30,7 @@ const posts = (await getCollection("work")).sort(
       }
     </style>
   </head>
-  <body class="bg-stone-100">
+  <body class="bg-stone-100 text-stone-800 font-sans font-light text-base">
     <Header />
     <main class="bg-stone-50 flex justify-center w-full px-12 py-20">
       <section class="sm:flex items-center sm:space-x-12 max-w-6xl">
@@ -38,7 +38,7 @@ const posts = (await getCollection("work")).sort(
           {
             posts.map((post) => (
               <li>
-                <a href={`/work/${post.slug}/`}>
+                <a href={`/garden/${post.slug}/`}>
                   <img
                     class="rounded-md"
                     width={720}

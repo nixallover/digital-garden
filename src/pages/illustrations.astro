@@ -1,0 +1,71 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+const illustrations = [
+  {
+    title: "Kacy and the tiger",
+    publishDate: "April 2023",
+    heroImage: `/illustrations/2023-04-kacy-and-tiger-hero.png`,
+    fullImage: `/illustrations/2023-04-kacy-and-tiger.png`,
+  },
+  {
+    title: "Nx + Angular",
+    publishDate: "August 2022",
+    heroImage: `/illustrations/2022-08-nx-angular-hero.png`,
+    fullImage: `/illustrations/2023-04-kacy-and-tiger.png`,
+  },
+  {
+    title: "Nx + React",
+    publishDate: "September 2022",
+    heroImage: `/illustrations/2022-09-nx-react-hero.png`,
+    fullImage: `/illustrations/2022-09-nx-react.png`,
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      ul li {
+        width: calc(50% - 1rem);
+      }
+      @media (max-width: 720px) {
+        ul li {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-stone-100 text-stone-800 font-sans font-light text-base">
+    <Header />
+    <main class="bg-stone-50 flex justify-center w-full px-12 py-20">
+      <section class="flex flex-col items-center space-x-12 max-w-7xl">
+        <h1 class="text-3xl md:text-6xl mb-8 font-serif">Illustrations</h1>
+
+        <ul class="flex gap-4 flex-wrap">
+          {
+            illustrations.map((illustration) => (
+              <li>
+                <a>
+                  <img
+                    class="rounded-md"
+                    width={720}
+                    height={360}
+                    src={illustration.heroImage}
+                    alt=""
+                  />
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
