@@ -2,14 +2,21 @@
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
 import SocialLinks from "./SocialLinks.astro";
+import { Image } from "astro:assets";
 ---
 
 <header class="px-8 bg-stone-50 shadow-lg relative">
   <nav class="flex items-center justify-between">
-    <h2 class="text-emerald-800 font-serif italic text-xl">
+    <h2 class="text-stone-400 font-serif italic text-lg">
       <a href="/" class="flex items-center gap-2">
-        <img src="/copper-watering-can-icon.svg" class="w-8 h-8" />
-        <span class="mt-2">{SITE_TITLE}</span>
+        <Image
+          src="/copper-watering-can-icon.svg"
+          width={32}
+          height={32}
+          class="hidden sm:block"
+          alt="Hey I'm Nicole"
+        />
+        <span class="mt-1">{SITE_TITLE}</span>
       </a>
     </h2>
 

@@ -4,7 +4,9 @@ import SocialLinks from "./SocialLinks.astro";
 const today = new Date();
 ---
 
-<footer class="flex flex-col items-center gap-4 px-8 pt-10 pb-24">
+<footer
+  class="flex flex-col items-center gap-4 px-8 pt-10 pb-24 border border-0 border-t-2 border-stone-200"
+>
   <span>&copy; {today.getFullYear()} Nicole Oliver. All rights reserved.</span>
   <SocialLinks />
 </footer>
