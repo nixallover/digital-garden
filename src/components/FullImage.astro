@@ -1,0 +1,18 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { Image } from "astro:assets";
+
+type Props = { src: string } & HTMLAttributes<"img">;
+
+const { src, class: className } = Astro.props;
+---
+
+<div class="w-full border flex justify-center items-center">
+  <Image
+    src={src}
+    width={1200}
+    height={1200}
+    class:list={["max-w-full xl:max-w-[1200px]", className]}
+    alt=""
+  />
+</div>
