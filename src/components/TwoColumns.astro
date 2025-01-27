@@ -1,26 +1,9 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
+import type { HTMLAttributes } from "astro/types";
 
-type Props = HTMLAttributes<'div'>;
-
-const { class: className, ...props } = Astro.props;
-
-const { pathname } = Astro.url;
-const subpath = pathname.match(/[^\/]+/g);
+type Props = HTMLAttributes<"div">;
 ---
 
-<div class="wrapper">
-	<slot />
+<div class="grid md:grid-cols-2 gap-4">
+  <slot />
 </div>
-<style>
-	.wrapper {
-		display: flex;
-		color: red;
-	}
-	.wrapper > * {
-		width: 50%;
-	}
-	.wrapper > * + * {
-		margin-right: 2rem;
-	}
-</style>

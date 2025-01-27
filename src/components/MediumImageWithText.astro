@@ -1,0 +1,21 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { Image } from "astro:assets";
+
+type Props = { src: string } & HTMLAttributes<"img">;
+
+const { src, alt, class: className } = Astro.props;
+---
+
+<div class="grid md:grid-cols-2 gap-8">
+  <Image
+    src={src}
+    width={600}
+    height={600}
+    class:list={["", className]}
+    alt={alt ?? "illustration"}
+  />
+  <div>
+    <slot />
+  </div>
+</div>

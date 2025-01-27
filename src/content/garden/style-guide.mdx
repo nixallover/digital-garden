@@ -2,7 +2,13 @@
 title: "Markdown Style Guide"
 description: "Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro."
 pubDate: "Jul 01 2022"
+heroImage: "/garden/style-guide/hero.png"
 ---
+
+import FullImage from '../../components/FullImage.astro';
+import MediumImageWithText from '../../components/MediumImageWithText.astro';
+
+<FullImage src="/garden/style-guide/large-illustration.webp" />
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
 
@@ -30,15 +36,9 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 
 ## Images
 
-#### Syntax
-
-```markdown
-![Alt text](./full/or/relative/path/of/image)
-```
-
-#### Output
-
-![blog placeholder](/blog-placeholder-about.jpg)
+<MediumImageWithText src="/garden/style-guide/medium-illustration.webp">
+Morbi mattis malesuada suscipit. Mauris non lobortis neque. Ut aliquet elit leo, non semper tortor venenatis in. Ut eu ipsum consectetur, tristique augue sed, cursus metus. Vivamus sit amet euismod dolor, eget feugiat nibh. Nam nec egestas velit. Morbi eleifend erat at magna dapibus, ac elementum sem dignissim. Suspendisse auctor justo in nisl fringilla, vel facilisis velit tempor. Sed massa massa, rhoncus non nisl id, hendrerit iaculis lectus. Proin justo nisl, scelerisque ut mi id, semper interdum elit. Nam sodales arcu et mauris mattis egestas. Suspendisse cursus non mauris id hendrerit.
+</MediumImageWithText>
 
 ## Blockquotes
 
@@ -69,7 +69,7 @@ The blockquote element represents content that is quoted from another source, op
 
 #### Output
 
-> Don't communicate by sharing memory, share memory by communicating.<br>
+> Don't communicate by sharing memory, share memory by communicating.<br />
 > — <cite>Rob Pike[^1]</cite>
 
 [^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
@@ -208,6 +208,6 @@ H<sub>2</sub>O
 
 X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
 
-Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
+Press <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>Delete</kbd> to end the session.
 
 Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
